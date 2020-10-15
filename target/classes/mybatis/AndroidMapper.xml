@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Mapper를 만들때 아래 doctype이 필요하다 이는 배포사이트에서 가져온다. https://mybatis.org/mybatis-3/getting-started.html -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="mybatis.IAndroidDAO">
+	<select id="memberList" resultType="mybatis.MemberVO">
+		SELECT * FROM member ORDER BY regidate DESC
+	</select>
+	
+	<select id="memberLogin" resultType="mybatis.MemberVO" parameterType="mybatis.MemberVO">
+		SELECT * FROM member WHERE id =#{id} and pass =#{pass}
+	</select>
+
+	
+	
+	
+	
+	
+	
+</mapper>
